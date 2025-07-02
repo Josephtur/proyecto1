@@ -1,21 +1,29 @@
 .app-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  background-color: #1976d2; /* Azul similar a Angular Material */
+  background-color: black;
   color: white;
   padding: 10px 20px;
 }
 
-.app-header h1 {
+.app-h1 {
+  grid-column: 1;  /* lo pone en la primera columna */
+  justify-self: start;   /* lo alinea a la izquierda dentro de esa columna */
   margin: 0;
   font-size: 20px;
+}
+
+.app-header nav {
+  grid-column: 2;    /* lo pone en la columna del centro */
+  justify-self: center;  /* lo centra horizontalmente en esa columna */
+  display: flex;
+  gap: 20px;
 }
 
 .app-header nav a {
   color: white;
   text-decoration: none;
-  margin-left: 10px;
 }
 
 .app-header nav a:hover {

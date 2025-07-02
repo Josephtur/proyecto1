@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  /* Degradado animado con colores más vivos pero elegantes */
+  background: linear-gradient(
+    270deg,
+    #2c3e50,  /* azul grisáceo oscuro */
+    #4ca1af,  /* turquesa suave */
+    #2c3e50,  /* coral delicado */
+    #955e6e,  /* rosa antiguo */
+    #2c3e50   /* azul grisáceo oscuro */
+  );
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
+  margin: 0;
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}

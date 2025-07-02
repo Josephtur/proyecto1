@@ -3,6 +3,9 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';   // Nuestro array de rutas definido en app.routes.ts
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
 
 // Configuración global de la aplicación Angular (sin NgModule)
 export const appConfig: ApplicationConfig = {
@@ -25,7 +28,17 @@ export const appConfig: ApplicationConfig = {
     //    provideHttpClient() registra HttpClient en el inyector global,
     //    haciendo posible inyectarlo en servicios y componentes
     //    para realizar peticiones HTTP (GET, POST, etc.).
-    provideHttpClient()
+    provideHttpClient(),
+
+    provideAnimationsAsync(),
+        providePrimeNG({
+            theme: {
+                preset: Aura
+            }
+        })
+
+
+
   ]
 };
 

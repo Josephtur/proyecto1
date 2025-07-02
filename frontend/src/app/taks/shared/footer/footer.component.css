@@ -1,13 +1,12 @@
-/* Selector global de componente que fuerza estilo en la toolbar del footer */
-:host ::ng-deep .app-toolbar.footer {
-  /* Establece un contenedor flex para centrar horizontal y verticalmente */
-  display: flex !important;
-  align-items: center !important;    /* Alinea verticalmente al centro */
-  justify-content: center !important;/* Alinea horizontalmente al centro */
-
-  /* Altura fija de 4rem para la barra inferior */
-  height: 4rem;
-
-  /* Espaciado horizontal interno de 1rem a cada lado */
-  padding: 0 1rem;
+.app-footer {
+  position: fixed;      /* Para que se quede siempre en la parte inferior */
+  left: 0;              /* Alineado al borde izquierdo */
+  bottom: 0;            /* Pegado al pie de la ventana */
+  width: 100%;          /* Ocupa todo el ancho */
+  background-color: #000; /* Fondo negro */
+  color: #fff;          /* Texto blanco */
+  text-align: center;   /* Centrar el texto */
+  padding: 1rem;        /* Espaciado interno */
+  box-sizing: border-box;
+  z-index: 1000;        /* Para que quede por encima de otros elementos */
 }
