@@ -1,0 +1,23 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1976d2; /* Azul similar a Angular Material */
+  color: white;
+  padding: 10px 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.app-header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.app-header nav a:hover {
+  text-decoration: underline;
+}
